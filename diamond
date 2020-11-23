@@ -1,0 +1,100 @@
+
+// TIME COMPLEXITY : O(n^2)
+
+public class Shapes {
+
+    // upper triangle
+    public void upperTriangle(int aHeight){
+        // used for white spaces and height
+        int bHeight=aHeight;
+        int starCount=0;
+
+        for(int i=0;i<=aHeight;i++){
+
+            // for white spaces
+            for(int left=0;left<bHeight;left++){
+                System.out.print("-");
+            }
+
+            // for stars
+            for(int stars=0;stars<=starCount;stars++){
+                System.out.print("*");
+            }
+
+            // for white spaces
+            for(int right=0;right<bHeight;right++)
+                System.out.print("-");
+
+            // reduce white space length
+            bHeight--;
+            starCount=starCount+2;
+
+            System.out.println();
+
+        }// end for-loop
+    }// end upperTriangle()
+
+    // lower triangle
+    public void lowerTriangle(int aHeight){
+        // use for stars
+        int bHeight=aHeight+(aHeight-1);
+        // use for white spaces
+        int white=1;
+        for(int height=0;height<aHeight;height++) {
+            // for left white-spaces
+            for (int i = 1; i <= white; i++)
+                System.out.print("-");
+
+            for (int j = 1; j <= bHeight; j++)
+                System.out.print("*");
+
+            for (int k = 1; k <= white; k++)
+                System.out.print("-");
+
+            bHeight = bHeight - 2;
+            white++;
+            // for next line
+            System.out.println();
+
+        }// end for-loop
+
+    }// end lowerTriangle()
+
+    public void diamond(int aHeight){
+        // using upper triangle function
+        upperTriangle(aHeight);
+        // using lower triangle function
+        lowerTriangle(aHeight);
+
+    }// end diamond
+
+
+    public static void main(String args[]){
+        Shapes tri=new Shapes();
+
+        // display right triangle
+        tri.diamond(6);
+
+
+    }// end main
+}// end class
+
+// OUTPUT :
+//        ------*------
+//        -----***-----
+//        ----*****----
+//        ---*******---
+//        --*********--
+//        -***********-
+//        *************
+//        -***********-
+//        --*********--
+//        ---*******---
+//        ----*****----
+//        -----***-----
+//        ------*------
+
+
+// TIME COMPLEXITY : O(n^2)+O(n^2) = O(N^2)
+// upper triangle  : O(n^2)
+// lower triangle  : O(n^2)
