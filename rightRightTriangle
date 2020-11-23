@@ -20,7 +20,7 @@ public class Shapes {
             
             bWidth--;
             System.out.println();
-        }
+        }// end for-loop
     }// end rightTriangle()
 
     public static void main(String args[]){
