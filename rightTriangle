@@ -14,7 +14,7 @@ public class Shapes {
     }// end leftTriangle()
 
     public static void main(String args[]){
-        triangle tri=new triangle();
+        Shapes tri=new Shapes();
 
         // display left triangle
         tri.leftRightTriangle(6);
