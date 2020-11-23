@@ -1,0 +1,53 @@
+
+// TIME COMPLEXITY : O(n^2)
+
+public class Shapes {
+
+    // lower triangle
+    public void lowerTriangle(int aHeight){
+        // use for stars
+        int bHeight=aHeight+(aHeight-1);
+        // use for white spaces
+        int white=1;
+        for(int height=0;height<aHeight;height++) {
+            // for left white-spaces
+            for (int i = 1; i <= white; i++)
+                System.out.print("-");
+
+            for (int j = 1; j <= bHeight; j++)
+                System.out.print("*");
+
+            for (int k = 1; k <= white; k++)
+                System.out.print("-");
+
+            bHeight = bHeight - 2;
+            white++;
+            // for next line
+            System.out.println();
+
+        }// end for-loop
+
+    }// end lowerTriangle()
+
+
+    public static void main(String args[]){
+        Shapes tri=new Shapes();
+
+        // display right triangle
+        tri.lowerTriangle(6);
+
+
+    }// end main
+}// end class
+
+// -***********-
+// --*********--
+// ---*******---
+// ----*****----
+// -----***-----
+// ------*------
+
+// aWidth = 6
+
+// time complexity of for-loop : O(n)
+// for nested loop : O(n(n+n+n)) = O(n^2)
