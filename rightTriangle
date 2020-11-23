@@ -1,0 +1,34 @@
+public class Shapes {
+
+    // right triangle
+    // perpendicular on left most side
+    
+    // aWidth == width and height of the triangle
+    public void leftRightTriangle(int aWidth){
+        for(int j=0;j<aWidth;j++) {
+            for (int stars = 0; stars <= j; stars++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }// end leftTriangle()
+
+    public static void main(String args[]){
+        triangle tri=new triangle();
+
+        // display left triangle
+        tri.leftRightTriangle(6);
+
+
+    }// end main
+}// end class
+
+
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+
+// for width=6
