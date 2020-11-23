@@ -1,0 +1,43 @@
+public class Shapes {
+
+    // right triangle
+    // hypotenus on the right side
+
+    // aWidth == width & height of the triangle
+    public void rightRightTriangle(int aWidth){
+        // use for white spaces
+        int bWidth=aWidth;
+
+        for(int i=0;i<aWidth;i++){
+
+            for(int k=0;k<bWidth;k++) {
+                System.out.print(" ");
+            }
+
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            
+            bWidth--;
+            System.out.println();
+        }
+    }// end rightTriangle()
+
+    public static void main(String args[]){
+        Shapes tri=new Shapes();
+
+        // display right triangle
+        tri.rightRightTriangle(6);
+
+
+    }// end main
+}// end class
+
+//      *
+//     **
+//    ***
+//   ****
+//  *****
+// ******
+
+// aWidth = 6
