@@ -1,0 +1,39 @@
+public class Rectangle {
+
+    // display rectangle
+    // input : length,width
+    // output : display rectangle
+    // time complexity: O(n^2)
+    // handling : nothing
+
+    void displayRectangle(int aWidth, int aHeight){
+        for(int i=0;i<aHeight;i++){
+            for(int j=0;j<aWidth;j++){
+                System.out.print("* ");
+            }
+            System.out.println();// for next line
+
+        }// end for-loop
+
+    }// end displayRectangle()
+
+    public static void main(String args[]){
+        Rectangle rect1=new Rectangle();
+
+        // enter width and height
+        int width=9;
+        int height=6;
+
+        rect1.displayRectangle(width,height);
+        
+    }// end main()
+
+}// end class
+
+// output : dimensions 9*6
+// * * * * * * * * * 
+// * * * * * * * * * 
+// * * * * * * * * * 
+// * * * * * * * * * 
+// * * * * * * * * * 
+// * * * * * * * * * 
