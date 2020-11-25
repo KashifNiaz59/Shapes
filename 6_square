@@ -1,0 +1,33 @@
+public class Square {
+
+    // function star square
+    // input : length (integer)
+    // output : display the square
+    // time complexity : O(n^2)
+
+    public void printSquare(int aLength){
+
+        for(int height=0;height<aLength;height++) {
+            for (int width = 0; width < aLength; width++) {
+                System.out.print("* ");
+            }
+            System.out.println(); // for next line
+        }// end for-loop
+    }// end printSquare()
+
+    public static void main(String args[]){
+        Square s1=new Square();
+
+        // enter the length of the square
+        int length=5;
+
+        s1.printSquare(length);
+    }// end main
+}// end class
+
+// output 
+// * * * * *
+// * * * * *
+// * * * * *
+// * * * * *
+// * * * * *
